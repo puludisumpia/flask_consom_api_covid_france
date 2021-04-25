@@ -1,9 +1,22 @@
+from datetime import date
+import json
+import requests
+
+
 from flask import Flask, render_template
 from flask_moment import Moment
-from datetime import date
 
-# on importe la fonction que nous avons crée dans __init__.py
-from fonctions import get_covid_data
+def get_covid_data(lien):
+    """
+        Cette fonction a été pensée pour accepter en parametre un lien
+        et renvoi les données du type dictionnaire (dict)
+    """
+    req = requests.get(lien)
+    req_json = json.loads(req.text)
+    for data in req_json.values():
+        for elements in data:
+            return elements
+
 
 app = Flask(__name__)
 moment = Moment(app)
