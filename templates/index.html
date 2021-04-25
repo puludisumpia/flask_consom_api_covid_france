@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-3 mb-5">
+        <h1 class="text-primary text-center">Informations Covid-19</h1>
+        <h6 class="text-secondary text-center">Données mises à jour: le {{ moment(date).format("LLLL") }}</h6>
+        <p class="text-secondary text-center mb-5">Source de données : Santé publique France </p>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <h5>{{ data["nom"] }} entière</h5>
+                <hr mb-5>
+
+                <p>Personnes hospitalisées: <strong>{{ data["hospitalises"] }}</strong></p>
+                <p>Personnes en réanimation: <strong>{{ data["reanimation"] }}</strong></p>
+                <p>Nouvelles Hospitalisations: <strong>{{ data["nouvellesHospitalisations"] }}</strong></p>
+                <p>Nouvelles réanimations: <strong>{{ data["nouvellesReanimations"] }}</strong></p>
+                <p>Nombre de decès: <strong>{{ data["deces"] }}</strong></p>
+                <p>Nombre de personnes guéries: <strong>{{ data["gueris"] }}</strong></p>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <h5>Département de {{ data_paris["nom"] }}</h5>
+                <hr mb-5>
+
+                <p>Personnes hospitalisées: <strong>{{ data_paris["hospitalises"] }}</strong></p>
+                <p>Personnes en réanimation: <strong>{{ data_paris["reanimation"] }}</strong></p>
+                <p>Nouvelles Hospitalisations: <strong>{{ data_paris["nouvellesHospitalisations"] }}</strong></p>
+                <p>Nouvelles réanimations: <strong>{{ data_paris["nouvellesReanimations"] }}</strong></p>
+                <p>Nombre de decès: <strong>{{ data_paris["deces"] }}</strong></p>
+                <p>Nombre de personnes guéries: <strong>{{ data_paris["gueris"] }}</strong></p>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <h5>Département de {{ data_marne["nom"] }}</h5>
+                <hr mb-5>
+
+                <p>Personnes hospitalisées: <strong>{{ data_marne["hospitalises"] }}</strong></p>
+                <p>Personnes en réanimation: <strong>{{ data_marne["reanimation"] }}</strong></p>
+                <p>Nouvelles Hospitalisations: <strong>{{ data_marne["nouvellesHospitalisations"] }}</strong></p>
+                <p>Nouvelles réanimations: <strong>{{ data_marne["nouvellesReanimations"] }}</strong></p>
+                <p>Nombre de decès: <strong>{{ data_marne["deces"] }}</strong></p>
+                <p>Nombre de personnes guéries: <strong>{{ data_marne["gueris"] }}</strong></p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
