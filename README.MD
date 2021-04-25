@@ -6,6 +6,8 @@ Pour l'utiliser:
 - Créer un environnement virtuel
 - Installer les packets nécessaires (requirements.txt).
 
+- Puis lancer l'application
+
 
 Créée par Mpia M.
 
