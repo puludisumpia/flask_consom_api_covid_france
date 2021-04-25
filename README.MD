@@ -2,8 +2,9 @@
 
 Cette petite application permet de mettre en pratique la consommation d'une Api en particulier celle de Covid-19 France.
 
-Pour l'utiliser, veuillez installer les packets nécessaires.
-
+Pour l'utiliser:
+- Créer un environnement virtuel
+- Installer les packets nécessaires (requirements.txt).
 
 
 Créée par Mpia M.
